@@ -1,8 +1,5 @@
 // Imports redux library
-import {
-  configureStore,
-  SerializableStateInvariantMiddlewareOptions,
-} from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { useSelector, useDispatch, TypedUseSelectorHook } from "react-redux";
 
 // Imports reducers

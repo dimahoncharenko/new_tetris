@@ -144,6 +144,7 @@ export const rotate = ({ direction = 1, tetromino }: RotateArgs) => {
 
   if (direction > 0) return rotated.map((row) => row.reverse());
 
+  // Rotate in different direction
   return rotated.reverse();
 };
 
@@ -162,8 +163,11 @@ export const hasCollision = ({
     for (let col = 0; col < tetromino[0].length; col++) {
       if (tetromino[row][col]) {
         if (
+          // If there is a row in the board array which equals player's position
           !board[row + position.y] ||
+          // If there is a cell in the board array
           !board[row + position.y][col + position.x] ||
+          // If the cell is fixed
           board[row + position.y][col + position.x].isFixed
         ) {
           return true;
@@ -190,6 +194,7 @@ export const handleRotation = ({
   dispatch,
   direction = 1,
 }: HandleRotationArgs) => {
+  // Take rotated tetromino
   let candidate = rotate({
     tetromino: tetromino,
     direction,
@@ -198,7 +203,7 @@ export const handleRotation = ({
   let newPos = { x: 0, y: 0 };
   let offset = 1;
 
-  // Shift tetromino's position if it is collided
+  // Shift tetromino's position if it is collided to the left or right
   while (
     hasCollision({
       tetromino: candidate,
@@ -209,7 +214,7 @@ export const handleRotation = ({
     newPos.x += offset;
     offset = -(offset + (offset > 0 ? 1 : -1));
 
-    // If offset of position is high then return to previous rotation and remove shifted position
+    // But if offset of position is high enough then return to previous rotation and remove shifted position
     if (offset > candidate[0].length) {
       candidate = rotate({
         tetromino: tetromino,
@@ -249,12 +254,15 @@ export const handleMovement = ({
     board,
   });
 
+  // If its the very first row, it will be ignored
   if (collided && position.y <= 0 && nextStep.y > 0) {
     dispatch(setGameOver());
   }
 
+  // If the player is plummeted and collided
   const isItTouchedGround = nextStep.y > 0 && collided;
 
+  // If 'Fast Drop' action is used, calculate the lowest position of player and update its position
   if (isFastDroping) {
     const dropRow = dropPosition({
       board,
@@ -273,6 +281,7 @@ export const handleMovement = ({
     );
   }
 
+  // Handle left, right and bottom movement
   dispatch(
     updatePlayer({
       position: {
@@ -295,6 +304,7 @@ export const dropPosition = ({
   board,
   tetromino,
 }: DropPositionArgs) => {
+  // Remained to the bottom of tetris
   const rowsToBottom = board.length - position.y;
   let ghostRow = 0;
 
@@ -309,6 +319,7 @@ export const dropPosition = ({
       break;
     }
 
+    // In the last iteration, it will get the lowest possible position of shape
     ghostRow = position.y + i;
   }
 

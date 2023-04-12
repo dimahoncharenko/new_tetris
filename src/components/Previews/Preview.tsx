@@ -1,12 +1,12 @@
 // Imports libraries
-import { Fragment } from "react";
+import { Fragment, memo } from "react";
 
 // Imports styled components
 import { PreviewWrapper } from "./styled";
 
 // Imports additional functionality
 import { CellType } from "../../utils/types";
-import { defaultBoard, TETROMINOS } from "../../utils/functionality";
+import { TETROMINOS } from "../../utils/functionality";
 
 // Imports components
 import { Cell } from "../Cell";
@@ -15,7 +15,7 @@ type Props = {
   type: CellType;
 };
 
-export const Preview = ({ type }: Props) => {
+export const Preview = memo(({ type }: Props) => {
   const tetromino = TETROMINOS[type];
 
   return (
@@ -39,4 +39,4 @@ export const Preview = ({ type }: Props) => {
       )}
     </PreviewWrapper>
   );
-};
+});
