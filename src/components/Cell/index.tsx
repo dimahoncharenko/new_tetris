@@ -1,10 +1,7 @@
-// Imports libraries
 import { CSSProperties, MouseEventHandler, memo } from "react";
 
-// Imports styled components
 import { CellWrapper } from "./styled";
 
-// Imports types
 import { CellType } from "../../utils/types";
 
 type Props = {

@@ -4,8 +4,6 @@
   box-sizing: border-box;
 
   --board-color: hsl(220, 40%, 25%);
-
-  /* Tetrominos' colour palette */
   --I: hsl(0, 85%, 37%);
   --L: hsl(288, 88%, 31%);
   --O: hsl(52, 90%, 57%);

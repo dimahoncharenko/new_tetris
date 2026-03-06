@@ -1,11 +1,8 @@
-// Imports libraries
 import { useEffect } from "react";
 
-// Imports redux stuff
 import { useAppSelector, useAppDispatch } from "../redux";
 import { updatePlayer } from "../redux/slices/game";
 
-// Imports additional functionality
 import { SPEED_STEP, MIN_SPEED } from "../utils/functionality";
 
 export const usePlaying = () => {

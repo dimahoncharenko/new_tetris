@@ -1,4 +1,3 @@
-// Imports styled components
 import {
   GameStatsWrapper,
   GameStatsList,
@@ -6,7 +5,6 @@ import {
   GameStatsListValue,
 } from "./styled";
 
-// Imports redux stuff
 import { useAppSelector } from "../../redux";
 
 export const GameStats = () => {

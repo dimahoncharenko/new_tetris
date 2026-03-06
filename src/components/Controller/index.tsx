@@ -1,10 +1,7 @@
-// Imports libraries
 import { KeyboardEvent, TouchEvent, useState } from "react";
 
-// Imports styled components
 import { ControllerWrapper } from "./styled";
 
-// Imports additional functionality
 import {
   handleMovement,
   handleRotation,
@@ -12,7 +9,6 @@ import {
 } from "../../utils/functionality";
 import { Pos } from "../../utils/types";
 
-// Imports redux stuff
 import {
   pauseGame,
   pausePlayer,
@@ -22,7 +18,6 @@ import {
 } from "../../redux/slices/game";
 import { useAppDispatch, useAppSelector } from "../../redux";
 
-// Imports custom hooks
 import { useInterval } from "../../hooks/useInterval";
 import { usePlaying } from "../../hooks/usePlaying";
 

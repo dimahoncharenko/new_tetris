@@ -1,4 +1,3 @@
-// Imports types
 import { useAppDispatch } from "../redux";
 import { setGameOver, updatePlayer } from "../redux/slices/game";
 import { ICell, CellType, Pos, TetrominoShape } from "./types";
@@ -128,7 +127,6 @@ const ACTIONS: {
 };
 
 export const keyToAction = (key: string): ActionTypes | undefined =>
-  // @ts-ignore
   ACTIONS[key];
 
 type RotateArgs = {

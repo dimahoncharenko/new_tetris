@@ -1,15 +1,11 @@
-// Imports redux stuff
 import { useAppSelector, useAppDispatch } from "../../redux/";
 import { resetPlayer, updateBoard, hitRow } from "../../redux/slices/game";
 
-// Imports styled components
 import { BoardWrapper } from "./styled";
 
-// Imports components
 import { Cell } from "../Cell";
 import { useEffect } from "react";
 
-// Imports additional functionality
 import {
   Cell as CellElement,
   dropPosition,

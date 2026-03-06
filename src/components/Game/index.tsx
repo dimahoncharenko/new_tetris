@@ -1,14 +1,10 @@
-// Imports libraries
 import { useEffect } from "react";
 
-// Imports components
 import { Menu } from "../Menu";
 import { Tetris } from "../Tetris";
 
-// Imports styled components
 import { GameWrapper, Modal } from "./styled";
 
-// Imports redux stuff
 import { useAppDispatch, useAppSelector } from "../../redux";
 import {
   resetGameOver,

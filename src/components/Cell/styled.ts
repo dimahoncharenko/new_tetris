@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// Imports types
 import { CellType } from "../../utils/types";
 
 export const CellWrapper = styled.div<{

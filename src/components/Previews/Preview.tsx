@@ -1,14 +1,10 @@
-// Imports libraries
 import { Fragment, memo } from "react";
 
-// Imports styled components
 import { PreviewWrapper } from "./styled";
 
-// Imports additional functionality
 import { CellType } from "../../utils/types";
 import { TETROMINOS } from "../../utils/functionality";
 
-// Imports components
 import { Cell } from "../Cell";
 
 type Props = {

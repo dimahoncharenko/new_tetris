@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-// Imports additional functionality
 import {
   defaultBoard,
   Cell,

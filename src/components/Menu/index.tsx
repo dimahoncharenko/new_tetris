@@ -1,10 +1,7 @@
-// Imports libraries
 import { MouseEventHandler } from "react";
 
-// Imports styled components
 import { StartButton, MenuWrapper, Logo, MainHeading } from "./styled";
 
-// Imports assets
 import gameboy from "../../images/gameboy.png";
 
 type Props = {

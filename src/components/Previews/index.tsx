@@ -1,10 +1,7 @@
-// Imports styled components
 import { PreviewsWrapper } from "./styled";
 
-// Imports components
 import { Preview } from "./Preview";
 
-// Imports redux stuff
 import { useAppSelector } from "../../redux";
 
 export const Previews = () => {

@@ -1,7 +1,5 @@
-// Imports styled components
 import { MainWrapper } from "./styled";
 
-// Imports components
 import { Game } from "./components/Game";
 
 function App() {
